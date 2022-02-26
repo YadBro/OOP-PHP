@@ -6,7 +6,7 @@
 
 
 /* 
-    [[ INHERITANCE / PEWARISAN SIFAT ]] menciptakan sebuah hierarki antar kelas (Parent & Child)
+    INHERITANCE / PEWARISAN SIFAT menciptakan sebuah hierarki antar kelas (Parent & Child)
 
     ketika menciptakan sebuah Child class, child class akan mewarisi semua properti dan
     method dari parent-nya (yang visible) alias dapat di lihat atau dapat di akses
@@ -14,6 +14,10 @@
     - PUBLIC
     - PRIVATE
     - PROTECTED
+
+    [[ OVERRIDING ]] adalah  sebuah istilah dimana kita bisa membuat method function di class child
+    yang memiliki nama yang sama dengan method function parent
+
 */
 
 
@@ -23,21 +27,17 @@ class Produk // This is a **CLASS**
     public $judul,
         $penulis,
         $penerbit,
-        $harga,
-        $jml_halaman,
-        $waktu_main;
+        $harga;
 
     // Constructor is a Method or a Magic Method
     // Construct ini akan di jalankan secara otomatis ketika class produk di jalankan
-    public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $jml_halaman = 0, $waktu_main = 0)
+    public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0)
     // default value $harga = 0; 0 is default value for harga variable
     {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga;
-        $this->jml_halaman = $jml_halaman;
-        $this->waktu_main = $waktu_main;
     }
 
     // This is a Method
@@ -59,18 +59,35 @@ class Produk // This is a **CLASS**
 
 class Komik extends Produk
 {
+    public $jml_halaman;
+
+    public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $jml_halaman = 0)
+    {
+        parent::__construct($judul, $penulis, $penerbit, $harga);
+        $this->jml_halaman = $jml_halaman;
+    }
+
     public function getInfoProduk()
     {
-        $str = "Komik : {$this->judul} | {$this->getLabel()} (Rp.{$this->harga}) - {$this->jml_halaman} Halaman.";
+        // OVERRIDING
+        $str = "Komik : " . parent::getInfoProduk() . " - {$this->jml_halaman} Halaman.";
         return $str;
     }
 }
 
 class Game extends Produk
 {
+    public $waktu_main;
+
+    public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $waktu_main = 0)
+    {
+        // OVERRIDING
+        parent::__construct($judul, $penulis, $penerbit, $harga);
+        $this->waktu_main = $waktu_main;
+    }
     public function getInfoProduk()
     {
-        $str = "Game : {$this->judul} | {$this->getLabel()} (Rp.{$this->harga}) - {$this->waktu_main} jam.";
+        $str = "Game : " . parent::getInfoProduk() . " - {$this->waktu_main} jam.";
         return $str;
     }
 }
@@ -98,11 +115,11 @@ class CetakInfoProduk
 
 // KOMIK // This is an **OBJECT**
 // Variable dari sebuah object di sebut INSTANCE
-$Produk_1 = new Komik("Naruto", "Masashi Kimoto", "Trans Studio Bandung", 3000, 100, 0);
+$Produk_1 = new Komik("Naruto", "Masashi Kimoto", "Trans Studio Bandung", 3000, 100);
 
 // GAME // This is an **OBJECT**
 // Variable dari sebuah object di sebut INSTANCE
-$Produk_2 = new Game("Roblox", "Bang Yadi", "YadBro Studio", 1000, 0, 50);
+$Produk_2 = new Game("Roblox", "Bang Yadi", "YadBro Studio", 1000, 50);
 
 echo $Produk_1->getInfoProduk();
 echo "<br>";

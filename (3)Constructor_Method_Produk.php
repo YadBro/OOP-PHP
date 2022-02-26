@@ -50,7 +50,7 @@ $Produk_1 = new Produk("Naruto", "Masashi Kimoto", "Trans Studio Bandung", 3000)
 $Produk_2 = new Produk("Roblox", "Bang Yadi", "YadBro Studio", 1000);
 
 // another object of game
-$Produk_3 = new Produk("Fortnite", "Masashi Kimoto", "Trans Studio Bandung");
+$Produk_3 = new Produk("Fortnite", "Masashi Kimoto", "Trans Studio Bandung", 2000);
 
 
 echo "Komik: " . $Produk_1->getLabel() . "<br>";
