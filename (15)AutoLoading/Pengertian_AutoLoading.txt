@@ -1,0 +1,7 @@
+[[ AUTOLOADING ]] adalah proses pemanggilan class yang nantinya kita simpan dalam bentuk
+file tanpa harus menggunakan function require(). Artinya nanti class akan otomatis terpanggil
+
+
+
+dalam php ada method function yang namanya [[ spl_autoload_register(); ]] untuk memanggil semua
+class beserta turunannya

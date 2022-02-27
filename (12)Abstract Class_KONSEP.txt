@@ -1,0 +1,14 @@
+    Abstract Class / Kelas Abstrak adalah sebuah kelas yang tidak dapat di instansiasi oleh objek.
+Abstrak kelas nantinya berperan sebagai kerangka dasar untuk kelas turunannya. Jadi nanti yang
+dapat di instansiasi adalah kelas turunannya.
+    Dalam pembuatan kelas abstrak minimal harus memiliki 1 metode abstrak. Kelas abstrak di gunakan
+dalam pewarisan sifat / inheritance.
+
+
+untuk membuat Kelas Abstrak gunakan keyword "absctract" di awal sebelum penulisan keyword "class".
+CONTOH:
+
+
+absctract class Binatang{
+
+}

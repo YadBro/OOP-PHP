@@ -1,0 +1,2 @@
+    Di dalam directory ini kita memisahkan semua kelas dari file "(14)Interface_Produk" di mulai dari interface,
+abstract, dan kelas lainnya ke dalam directory "(15.2)Produk" ini

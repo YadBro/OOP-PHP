@@ -1,0 +1,13 @@
+[[ NAMESPACE / ENCAPSULATION ]] adalah sebuah penginisialiasian class untuk memisahkan nama class yang sama.
+Jadi misalkan ada 2 directory yaitu (Produk dan Service) di dalam 2 directory tersebut terdapat
+2 class name yang sama yaitu user. Nah apabila kita panggil PHP akan ambigu karena terdapat class
+name user yang sama pada kedua directory tersebut. Jadi agar PHP tidak ambigu kita kasih tau kepada
+PHP bahwa class user ini adalah punyanya directory ini dan itu.
+
+Contohnya bisa lihat di:
+1. Directory Service    = User.php
+2. Directory Produk     = User.php
+
+
+dalam php ada method function yang namanya [[ spl_autoload_register(); ]] untuk memanggil semua
+class beserta turunannya
