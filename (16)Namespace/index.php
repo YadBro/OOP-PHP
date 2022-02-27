@@ -2,7 +2,7 @@
 
 require_once('App/init.php');
 
-// KOMIK // This is an **OBJECT**
+// KOMIK // This is an **OBJECT**.
 // Variable dari sebuah object di sebut INSTANCE
 $Produk_1 = new Komik("Naruto", "Masashi Kimoto", "Trans Studio Bandung", 3000, 100);
 
