@@ -36,7 +36,7 @@
 
     [[ INTERFACE ]] adalah sebuah kelas abstrak yang tidak boleh memiliki property, hanya deklarasi
     method interfacenya saja
-
+    == interface == 
 */
 
 interface InfoProduk
