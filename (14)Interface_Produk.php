@@ -34,7 +34,7 @@
     yang visibility nya private.
 
 
-    [[ INTERFACE ]] adalah sebuah kelas abstrak yang tidak boleh memiliki, hanya deklarasi
+    [[ INTERFACE ]] adalah sebuah kelas abstrak yang tidak boleh memiliki property, hanya deklarasi
     method interfacenya saja
 
 */
